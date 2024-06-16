@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,14 +17,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.87);
+  border-radius: 50%;
+  transform: translate(-17px, -65px);
+  transition: all 0.2s ease-in-out;
 }
-a:hover {
-  color: #535bf2;
+
+.nav-links li:nth-child(1) {
+  &:hover ~ .dot {
+    transform: translate(-17px, -65px);
+  }
 }
+
+.nav-links li:nth-child(2) {
+  &:hover ~ .dot {
+    transform: translate(-17px, -41px);
+  }
+}
+
+.nav-links li:nth-child(3) {
+  &:hover ~ .dot {
+    transform: translate(-17px, -16px);
+  }
+}
+
+/* .nav-links a:nth-child(2):hover~.dot,
+.nav-links:not(:hover) a:nth-child(1).active~.dot {
+  transform: translateX(55px);
+} */
+
+.outside-link {
+  color: #AFBBDB;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nav-links:not(:hover) ul li:nth-child(2) a.active ~ .dot {
+  background-color: red;
+  transform: translate(-17px, -41px);
+}
+
+/* ul li:nth-child(2) a.active {
+  font-weight: bolder;
+  &:active ~ .dot {
+    transform: translate(-17px, -41px);
+  }
+} */
 
 body {
   margin: 0;
@@ -34,13 +76,13 @@ body {
 }
 
 h1 {
-  font-size: 2.6em;
+  font-size: 2.8em;
   line-height: 1.1;
-  font-family: Inria Serif Baskervville;
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 button {

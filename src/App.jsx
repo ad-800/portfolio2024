@@ -1,4 +1,3 @@
-import "./App.css"
 import { NavLink, Routes, Route } from 'react-router-dom'
 import AboutMe from "./links/AboutMe"
 import Projects from "./links/Projects"
@@ -11,13 +10,14 @@ function App() {
         <div>
           <div>
             <h1>Adalyne Cummins</h1>
-            <h2>Designer & Developer</h2>
+            <h2 className="mt-2">Designer & Developer</h2>
           </div>
-          <nav className="mt-5">
+          <nav className="nav-links mt-5 ml-4">
             <ul>
-              <li><NavLink to="/" >About Me</NavLink></li>
-              <li><NavLink to="/projects">Projects</NavLink></li>
-              <li><NavLink to="/contact">Contact</NavLink></li>
+              <li><NavLink to="/" className="nav-link">About Me</NavLink></li>
+              <li><NavLink to="/projects" className="nav-link">Projects</NavLink></li>
+              <li><NavLink to="/contact" className="nav-link">Contact</NavLink></li>
+              <div className="dot mr-3"/>
             </ul>
           </nav>
         </div>
