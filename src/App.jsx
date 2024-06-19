@@ -29,7 +29,11 @@ function App() {
           </Routes>
         </div>
       </div>
-      <div className="border border-white w-2/3"></div>
+      <div className="flex w-2/3 justify-center items-center">
+        <div className="window-edges flex justify-center items-center">
+          <div className="window"></div>
+        </div>
+      </div>
     </div>
   );
 }
